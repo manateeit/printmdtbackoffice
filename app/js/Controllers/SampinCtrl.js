@@ -1,7 +1,8 @@
 "use strict";
 
-MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataShare','$timeout','$http',
-                            function ($scope, $routeParams, dataSvc, dataShare, $timeout, $http) {
+MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataShare','$timeout','$http', '$cookieStore',
+                            function ($scope, $routeParams, dataSvc, dataShare, $timeout, $http, $cookieStore) {
+
    if ($routeParams.sampinId == null) {
        console.log($routeParams.sampinId);
        return;
@@ -13,11 +14,12 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
         dataSvc.childlookup($scope.customerId,$scope.sampinId, function(result) {
           $timeout (function () {
              $scope.data = result;
+             console.log($scope.data);
              $scope.$watch('data', function () {
                 var page = document.documentElement.outerHTML
                     .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
                     .replace(/(href="|src=")/g, '$1../');
-                    console.log(page);
+                    // console.log(page);
                 $.post("http://mdtprint.mediathread.co/cachestaticpage.php", { page: page, url: window.location.href } );
                 $('button.dontprint').removeAttr('disabled');
              });
@@ -29,7 +31,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
     this.companyIn = '';
 
   }])
-  .service('dataSvc', ['dataShare', function(dataShare) {
+  .service('dataSvc', ['dataShare', '$cookieStore', function(dataShare, $cookieStore) {
         var FIREBASEDB = "https://mdtbackoffice.firebaseio.com/";
         return {
             childAdded: function childAdded(id,cb) {
@@ -91,10 +93,17 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
                 });
             },
             childlookup: function childlookup (id,recordid,cb) {
+                var authdata = $cookieStore.get('UserSession');
+                console.log(authdata);
                 var fbUrl = 'https://mdtbackoffice.firebaseio.com/samplesin/' + id + "/" + recordid;
                 var companyRef = new Firebase(fbUrl);
-                companyRef.on('value', function (snapshot) {
-                    cb.call(this, snapshot.val());
+                companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
+                    if (!error) {
+                        console.log(authdata);
+                        companyRef.on('value', function (snapshot) {
+                            cb.call(this, snapshot.val());
+                        });
+                    }
                 });
             },
             queryAll: function queryAll(id,cb) {
