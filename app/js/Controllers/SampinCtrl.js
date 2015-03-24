@@ -20,8 +20,8 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
                     .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
                     .replace(/(href="|src=")/g, '$1../');
                     // console.log(page);
-                    
-                $.post("http://mdtprint.mediathread.co/cachestaticpage.php", { page: page, url: window.location.href } );
+
+                $.post("http://printdev.mdtbackoffice.com/cachestaticpage.php", { page: page, url: window.location.href } );
                 $('button.dontprint').removeAttr('disabled');
              });
           });
