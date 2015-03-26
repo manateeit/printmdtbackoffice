@@ -24,9 +24,9 @@
                 </td>
                 <td>
                     <strong>Contact Name:</strong>  {{ data.contact.name }} <br/>
-                    <strong>Contact Phone:</strong>  <br/>
-                    <strong>Contact Email:</strong>  <br/>
-                    <strong>Part Number:</strong> {{ data.material.name }}<br/>
+                    <strong>Contact Phone:</strong> {{ data.contact.workPhone }} <br/>
+                    <strong>Contact Email:</strong>  {{ data.contact.email }}  <br/>
+                    <strong>Material Number:</strong> {{ data.material.mdtID }}<br/>
                     <strong>SampleIn ID:</strong> {{ sampinId }} <br/>
                 </td>
             </tr>
@@ -45,7 +45,7 @@
             <tbody>
              <tr class="stable-row">
                 <td class="para">Melt Flow</td>
-                <td class="result">{{ data.provided.meltFlow }}<span ng-show="data.provided.meltFlow > 0">dg/min</span></td>
+                <td class="result">{{ data.provided.meltFlow }} <span ng-show="data.provided.meltFlow > 0">dg/min</span></td>
                 <td class="result">{{ data.tested.meltFlow }} <span ng-show="data.tested.meltFlow > 0">dg/min </span></td>
             </tr>
             <tr class="stable-row">
