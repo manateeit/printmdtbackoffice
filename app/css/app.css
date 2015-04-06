@@ -175,3 +175,18 @@ html#iprint-preview #navbar-container {
   /*padding-left: 0px !important;*/
   /*padding-right: 0px !important;*/
 }
+
+table.table-bordered.details th, 
+table.table-bordered.details td {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+table.table-bordered.details td.para {
+  border-right: 1px solid transparent;
+}
+
+table.table-bordered.details td.result,
+table.table-bordered.details th.results {
+    text-align: center;
+  }  

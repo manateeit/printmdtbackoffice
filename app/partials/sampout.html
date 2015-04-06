@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="header col-md-12 header-print">
+        <div class="no-print rightText" id="bypassme">
+            <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="DownloadPDF()" disabled>Download <i
+                class="icon-white icon-folder-open"></i></button>
+            <form id="form-download-file" action="http://printdev.mdtbackoffice.com/getfile.php" method="POST" hidden>
+                <input value="" type="text" name="url">
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<div class="row" style="font-size:16px; margin-top:20px; margin-left:-10px;">
+    <!-- <div class="col-md- col-md-offset-1"> -->
+        <table class="table table-hover table-bordered" id="top-header">
+            <tbody>
+            <tr class="stable-row">
+                <td style="width:25%; border-right: 1px solid transparent;">
+                    <p style="text-align: left;">
+                        <img id="imgData" alt="MDT LOGO" src="img/Logo.png" style="width: 200px;">
+                    </p>
+
+                </td>
+                <td style="width:35%">
+                     <strong>MDT Address:</strong>  {{ data.contact.name }} <br/>
+                    <strong>MDT Phone:</strong> {{ data.contact.workPhone }} <br/>
+                    <strong>MDT Fax:</strong>  {{ data.contact.email }}  <br/>
+                    <strong>MDT Email:</strong> {{ data.material.mdtID }}<br/>
+                </td>
+                <td style="width:40%">
+                    <strong>Customer Name:</strong>  {{ data.customer.name }} <br/>
+                    <strong>Contact Name:</strong> {{ data.contact.name }} <br/>
+                    <strong>Material ID:</strong>  {{ data.materialID.material.mdtID }}  <br/>
+                    <strong>Sample Out ID:</strong> {{ data.id }}<br/>                
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+
+        <table class="table table-hover table-bordered details" style="color:blue; font-size:18px;">
+            <thead>
+            <tr>
+                <th class="para">Parameters</th>
+                <th class="results">Specifications</th>
+            </tr>
+            </thead>
+            <tbody>
+             <tr class="stable-row">
+                <td class="para">Melt Flow</td>
+                <td class="result">{{ data.provided.meltFlow }} <span ng-show="data.provided.meltFlow > 0">dg/min</span></td>
+            </tr>
+            <tr class="stable-row">
+                <td class="para">Filler Content</td>
+                <td class="result">{{ data.provided.fillerContent }} <span ng-show="data.provided.fillerContent > 0">%</span></td>
+            </tr>
+            <tr class="stable-row">
+                <td class="para">Density</td>
+                <td class="result">{{ data.provided.density }} <span ng-show="data.provided.density > 0">g/cm^3</span></td>
+            </tr>
+            <tr class="stable-row">
+                <td class="para">Tensile Strength</td>
+                <td class="result">{{ data.provided.tensileStrength }} <span ng-show="data.provided.tensileStrength > 0">psi</span></td>
+            </tr>
+            <tr class="stable-row">
+                <td class="para">Flexural Modulus</td>
+                <td class="result">{{ data.provided.flexuralModulus }} <span ng-show="data.provided.flexuralModulus > 0">psi</span></td>
+            </tr>
+            <tr class="stable-row">
+                <td class="para">Color Reading</td>
+                <td class="result">{{ data.provided.colorReading }}</td>
+            </tr>
+            <tr class="stable-row">
+                <td class="para">Izod-Notched</td>
+                <td class="result">{{ data.provided.izodNotched }} <span ng-show="data.provided.izodNotched > 0">ft-lb/in</span></td>
+            </tr>
+            <tr class="stable-row">
+                <td class="para">Color</td>
+                <td class="result">{{ data.color }}</td>
+            </tr>
+
+            <tr class="stable-row">
+                <td class="para">Monthly Volume</td>
+                <td class="result">{{ data.monthlyVolume }}</td>
+            </tr>
+            </tbody>
+        </table>
+    <!-- </div> -->
+</div>
+
+
+
+   
