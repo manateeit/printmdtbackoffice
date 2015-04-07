@@ -33,7 +33,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
 
   }])
   .service('dataSvc', ['dataShare', '$cookieStore', function(dataShare, $cookieStore) {
-        var FIREBASEDB = "https://mdtbackoffice.firebaseio.com/";
+        var FIREBASEDB = "https://mdtbackoffice.firebaseio.com/DEVELOPMENT/";
         return {
             childAdded: function childAdded(id,cb) {
                 var fbUrl = 'https://mdtbackoffice.firebaseio.com/samplesin/' + id;
@@ -95,8 +95,8 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
             },
             childlookup: function childlookup (id,recordid,cb) {
                 var authdata = $cookieStore.get('UserSession');
-                console.log(authdata);
-                var fbUrl = 'https://mdtbackoffice.firebaseio.com/samplesin/' + id + "/" + recordid;
+                // console.log(authdata);
+                var fbUrl = FIREBASEDB + '/samplesin/' + id + "/" + recordid;
                 var companyRef = new Firebase(fbUrl);
                 companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
                     if (!error) {

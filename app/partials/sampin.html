@@ -43,48 +43,47 @@
             </tr>
             </thead>
             <tbody>
-             <tr class="stable-row">
+             <tr class="stable-row" ng-hide="data.view.meltFlow == false">
                 <td class="para">Melt Flow</td>
                 <td class="result">{{ data.provided.meltFlow }} <span ng-show="data.provided.meltFlow > 0">dg/min</span></td>
                 <td class="result">{{ data.tested.meltFlow }} <span ng-show="data.tested.meltFlow > 0">dg/min </span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row"  ng-hide="data.view.fillerContent == false">
                 <td class="para">Filler Content</td>
                 <td class="result">{{ data.provided.fillerContent }} <span ng-show="data.provided.fillerContent > 0">%</span></td>
                 <td class="result">{{ data.tested.fillerContent }} <span ng-show="data.tested.fillerContent > 0">%</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="data.view.density == false">
                 <td class="para">Density</td>
                 <td class="result">{{ data.provided.density }} <span ng-show="data.provided.density > 0">g/cm^3</span></td>
                 <td class="result">{{ data.tested.density }} <span ng-show="data.tested.density > 0">g/cm^3</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="data.view.tensileStrength == false">
                 <td class="para">Tensile Strength</td>
                 <td class="result">{{ data.provided.tensileStrength }} <span ng-show="data.provided.tensileStrength > 0">psi</span></td>
                 <td class="result">{{ data.tested.tensileStrength }} <span ng-show="data.tested.tensileStrength > 0">psi</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="data.view.flexuralModulus == false">
                 <td class="para">Flexural Modulus</td>
                 <td class="result">{{ data.provided.flexuralModulus }} <span ng-show="data.provided.flexuralModulus > 0">psi</span></td>
                 <td class="result">{{ data.tested.flexuralModulus }} <span ng-show="data.tested.flexuralModulus > 0">psi</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="data.view.colorReading == false">
                 <td class="para">Color Reading</td>
                 <td class="result">{{ data.provided.colorReading }}</td>
                 <td class="result">{{ data.tested.colorReading }}</td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="data.view.izodNotched == false">
                 <td class="para">Izod-Notched</td>
                 <td class="result">{{ data.provided.izodNotched }} <span ng-show="data.provided.izodNotched > 0">ft-lb/in</span></td>
                 <td class="result">{{ data.tested.izodNotched }} <span ng-show="data.tested.izodNotched > 0">ft-lb/in</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="data.color == false">
                 <td class="para">Color</td>
                 <td class="result">{{ data.color }}</td>
                 <td class="result"></td>
             </tr>
-
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="data.monthlyVolume == false">
                 <td class="para">Monthly Volume</td>
                 <td class="result">{{ data.monthlyVolume }}</td>
                 <td class="result"></td>
