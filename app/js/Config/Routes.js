@@ -19,11 +19,11 @@ MDTCRMApp.config(['$routeProvider', function($routeProvider) {
         .when('/cspec/label/',  {templateUrl: view('home'), controller: 'HomeCtrl'})
         .when('/cspec/label/:customerId/:cspecId', {templateUrl: view('cspeclabel'), controller: 'CspecCtrl'})
 
-        .when('/sampin/:customerId/',  {templateUrl: view('sampin'), controller: 'SampinCtrl'})
+        // .when('/sampin/:customerId/',  {templateUrl: view('sampin'), controller: 'SampinCtrl'})
         .when('/sampin/:customerId/:sampinId/', {templateUrl: view('sampin'), controller: 'SampinCtrl'})
 
-        .when('/sampout/',  {templateUrl: view('sampout'), controller: 'SampoutCtrl'})
-        .when('/sampout/:sampouId/', {templateUrl: view('sampout'), controller: 'SampoutCtrl'})
+        .when('/sampout/:sampoutId',  {templateUrl: view('sampout'), controller: 'SampoutCtrl'})
+        .when('/sampout/:customerId/:sampoutId/', {templateUrl: view('sampout'), controller: 'SampoutCtrl'})
 
         .when('/unautorized', {template: 'The server respond 401 Unautorized.'})
         ;
