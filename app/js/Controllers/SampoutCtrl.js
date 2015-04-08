@@ -16,7 +16,8 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
         dataSvc.childlookup($scope.customerId, $scope.sampoutId, function(result) {
             $timeout (function () {
                  $scope.data = result;
-                 console.log($scope.data);
+                 console.log($scope.data);  
+            });
                  dataSvc.getsamplein($scope.data.materialID.supplierID, $scope.data.materialID.samplesinID, function(resultSamplein) {
                     $timeout (function () {
                         $scope.dataSamplein = resultSamplein;
@@ -30,7 +31,6 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                          });
                     });
                  }, SAMPLEIN);
-            });
         }, SAMPLEOUT);
     }])
 
