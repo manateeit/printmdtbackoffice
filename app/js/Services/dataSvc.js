@@ -17,7 +17,13 @@ angular.module('AngStarter')
                     });
                 },
 
-                // getsamplein: function getsamplein (id, )
+                getsamplein: function getsamplein (id, recordid, cb, db) {
+                    var fbUrl = FIREBASEDB + '/' + db + '/' + id + "/" + recordid;
+                    var companyRef = new Firebase(fbUrl);
+                       companyRef.on('value', function (snapshot) {
+                            cb.call(this, snapshot.val());
+                        });
+                }
             };
     }])
     .service('dataShare', [ function () {

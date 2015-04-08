@@ -47,42 +47,42 @@
             </tr>
             </thead>
             <tbody>
-             <tr class="stable-row">
+             <tr class="stable-row" ng-hide="!dataSamplein.view.meltFlow">
                 <td class="para">Melt Flow</td>
-                <td class="result">{{ data.provided.meltFlow }} <span ng-show="data.provided.meltFlow > 0">dg/min</span></td>
+                <td class="result">{{ dataSamplein.provided.meltFlow }} <span ng-show="dataSamplein.provided.meltFlow > 0">dg/min</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="!dataSamplein.view.fillerContent">
                 <td class="para">Filler Content</td>
-                <td class="result">{{ data.provided.fillerContent }} <span ng-show="data.provided.fillerContent > 0">%</span></td>
+                <td class="result">{{ dataSamplein.provided.fillerContent }} <span ng-show="dataSamplein.provided.fillerContent > 0">%</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="!dataSamplein.view.density">
                 <td class="para">Density</td>
-                <td class="result">{{ data.provided.density }} <span ng-show="data.provided.density > 0">g/cm^3</span></td>
+                <td class="result">{{ dataSamplein.provided.density }} <span ng-show="dataSamplein.provided.density > 0">g/cm^3</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="!dataSamplein.view.tensileStrength">
                 <td class="para">Tensile Strength</td>
-                <td class="result">{{ data.provided.tensileStrength }} <span ng-show="data.provided.tensileStrength > 0">psi</span></td>
+                <td class="result">{{ dataSamplein.provided.tensileStrength }} <span ng-show="dataSamplein.provided.tensileStrength > 0">psi</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="!dataSamplein.view.flexuralModulus">
                 <td class="para">Flexural Modulus</td>
-                <td class="result">{{ data.provided.flexuralModulus }} <span ng-show="data.provided.flexuralModulus > 0">psi</span></td>
+                <td class="result">{{ dataSamplein.provided.flexuralModulus }} <span ng-show="dataSamplein.provided.flexuralModulus > 0">psi</span></td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="!dataSamplein.view.colorReading">
                 <td class="para">Color Reading</td>
-                <td class="result">{{ data.provided.colorReading }}</td>
+                <td class="result">{{ dataSamplein.provided.colorReading }}</td>
             </tr>
-            <tr class="stable-row">
+            <tr class="stable-row" ng-hide="!dataSamplein.view.izodNotched">
                 <td class="para">Izod-Notched</td>
-                <td class="result">{{ data.provided.izodNotched }} <span ng-show="data.provided.izodNotched > 0">ft-lb/in</span></td>
+                <td class="result">{{ dataSamplein.provided.izodNotched }} <span ng-show="dataSamplein.provided.izodNotched > 0">ft-lb/in</span></td>
             </tr>
             <tr class="stable-row">
                 <td class="para">Color</td>
-                <td class="result">{{ data.color }}</td>
+                <td class="result">{{ dataSamplein.color }}</td>
             </tr>
 
             <tr class="stable-row">
                 <td class="para">Monthly Volume</td>
-                <td class="result">{{ data.monthlyVolume }}</td>
+                <td class="result">{{ dataSamplein.monthlyVolume }}</td>
             </tr>
             </tbody>
         </table>
