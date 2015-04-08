@@ -18,11 +18,16 @@ angular.module('AngStarter')
                 },
 
                 getsamplein: function getsamplein (id, recordid, cb, db) {
+                    var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + '/' + db + '/' + id + "/" + recordid;
                     var companyRef = new Firebase(fbUrl);
-                       companyRef.on('value', function (snapshot) {
-                            cb.call(this, snapshot.val());
-                        });
+                    companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
+                        if (!error) {
+                           companyRef.on('value', function (snapshot) {
+                                cb.call(this, snapshot.val());
+                            });
+                         }
+                    });
                 }
             };
     }])
