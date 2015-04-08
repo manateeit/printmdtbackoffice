@@ -6,8 +6,9 @@ angular.module('AngStarter')
             return {
                 childlookup: function childlookup (id,recordid,cb,db) {
                     var authdata = $cookieStore.get('UserSession');
-                    var fbUrl = FIREBASEDB + '/' + db + '/' + id + "/" + recordid;
+                    var fbUrl = FIREBASEDB + db + '/' + id + "/" + recordid;
                     var companyRef = new Firebase(fbUrl);
+                    console.log(fbUrl);
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
                         if (!error) {
                             companyRef.on('value', function (snapshot) {
@@ -16,7 +17,6 @@ angular.module('AngStarter')
                         }
                     });
                 },
-
                 getsamplein: function getsamplein (id, recordid, cb, db) {
                     var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + '/' + db + '/' + id + "/" + recordid;
