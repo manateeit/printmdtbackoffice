@@ -30,7 +30,7 @@ angular.module('AngStarter')
                     });
                 },
 
-                getAddress: function getsamplein (cb, db) {
+                getAddress: function getAddress (cb, db) {
                     var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + 'defaults/' + db ;
                     var companyRef = new Firebase(fbUrl);
