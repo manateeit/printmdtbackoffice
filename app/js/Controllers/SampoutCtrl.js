@@ -6,26 +6,40 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
     var SAMPLEOUT = "samplesout";
     var SAMPLEIN = "samplesin";
     var ADDRESS = "MDTAddress";
-   if ($routeParams.sampoutId == null) {
+    var COLOR = "Color";
+   
+    if ($routeParams.sampoutId == null) {
        console.log($routeParams.sampoutId);
        return;
-   }
+    }
     else {
-     $scope.customerId = $routeParams.customerId;
-     $scope.sampoutId = $routeParams.sampoutId;
-     }
+        $scope.customerId = $routeParams.customerId;
+        $scope.sampoutId = $routeParams.sampoutId;
+    }
 
      dataSvc.getAddress(function(resultAddress) {
         $scope.address = resultAddress;
         $scope.$digest($scope.address);
      },ADDRESS);
 
+
         dataSvc.childlookup($scope.customerId, $scope.sampoutId, function(result) {
              $scope.data = result;
              $scope.$digest($scope.data);        
+
              dataSvc.getsamplein($scope.data.materialID.supplierID, $scope.data.materialID.samplesinID, function(resultSamplein) {
                 $timeout (function () {
                     $scope.dataSamplein = resultSamplein;
+                    
+                    dataSvc.getColor(function(resultColor) {
+                        $.each(resultColor, function(key, val) {
+                            console.log(val);
+                            if(val == $scope.dataSamplein.color) {
+                                $scope.color = key;
+                            }
+                        });
+                        $scope.$digest($scope.color);
+                    },COLOR);
 
                     $scope.$watch('dataSamplein', function () {
                         var page = document.documentElement.outerHTML

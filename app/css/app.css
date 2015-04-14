@@ -188,5 +188,6 @@ table.table-bordered.details td.para {
 
 table.table-bordered.details td.result,
 table.table-bordered.details th.results {
-    text-align: center;
+    text-align: right;
+    padding-right: 50px;
   }  
