@@ -30,18 +30,6 @@ angular.module('AngStarter')
                     });
                 },
 
-                getAddress: function getAddress (cb, db) {
-                    var authdata = $cookieStore.get('UserSession');
-                    var fbUrl = FIREBASEDB + 'defaults/' + db ;
-                    var companyRef = new Firebase(fbUrl);
-                    companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
-                        if (!error) {
-                           companyRef.on('value', function (snapshot) {
-                                cb.call(this, snapshot.val());
-                            });
-                         }
-                    });
-                },
                 getColor: function getColor (cb, db) {
                     var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + 'defaults/' + db ;
@@ -53,7 +41,22 @@ angular.module('AngStarter')
                             });
                          }
                     });
+                },
+
+                getAddress: function getAddress (cb, db) {
+                    var authdata = $cookieStore.get('UserSession');
+                    var fbUrl = FIREBASEDB + 'defaults/' + db ;
+                    var companyRef = new Firebase(fbUrl);
+                    companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
+                        if (!error) {
+                           companyRef.on('value', function (snapshot) {
+                                cb.call(this, snapshot.val());
+                            });
+                         }
+                    });
                 }
+
+              
             };
     }])
     .service('dataShare', [ function () {
