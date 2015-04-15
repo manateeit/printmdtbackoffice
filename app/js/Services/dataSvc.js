@@ -54,6 +54,18 @@ angular.module('AngStarter')
                             });
                          }
                     });
+                },
+                getMdtAddress:  function getMDTAddress (cb) {
+                    var authdata = $cookieStore.get('UserSession');
+                    var fbUrl = FIREBASEDB + 'defaults/MDTAddress';
+                    var fbRef = new Firebase(fbUrl);
+                    fbRef.authWithCustomToken(authdata.token, function(error, authdata) {
+                        if (!error) {
+                            companyRef.on('value', function (snapshot) {
+                                cb.call(this, snapshot.val());
+                            });
+                        }
+                    });
                 }
 
               

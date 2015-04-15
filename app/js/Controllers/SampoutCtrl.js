@@ -17,8 +17,9 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
         $scope.sampoutId = $routeParams.sampoutId;
     }
 
-     dataSvc.getAddress(function(resultAddress) {
+     dataSvc.getMDTAddress(function(resultAddress) {
         $scope.address = resultAddress;
+         console.log(resultsAddress);
         $scope.$digest($scope.address);
      },ADDRESS);
 
