@@ -23,10 +23,10 @@
 
                 </td>
                 <td style="font-size:12px;width:35%">
-                     <strong>MDT Address:</strong> {{ address.Address }} <br/>
-                    <strong>MDT Phone:</strong> {{ address.Phone | tel }} <br/>
-                    <strong>MDT Fax:</strong>  {{ address.Fax }} <br/>
-                    <strong>MDT Email:</strong> {{ address.email }} <br/>
+                    {{ address.Address }} <br/>
+                    {{ address.Phone | tel }} <br/>
+                    {{ address.Fax | tel }} <br/>
+                    {{ address.email }} <br/>
                 </td>
                 <td style="font-size:12px;width:40%">
                     <strong>Customer Name:</strong>  {{ data.customer.name }} <br/>
