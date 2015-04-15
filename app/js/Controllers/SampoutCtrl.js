@@ -16,10 +16,10 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
         $scope.customerId = $routeParams.customerId;
         $scope.sampoutId = $routeParams.sampoutId;
     }
-
+    console.log("Address:");
      dataSvc.getAddress(function(resultAddress) {
         $scope.address = resultAddress;
-         console.log("Address:")
+         console.log("Address:");
          console.log(resultsAddress);
         $scope.$digest($scope.address);
      },ADDRESS);
