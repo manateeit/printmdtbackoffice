@@ -3,4 +3,5 @@
  */
 'use strict';
 angular.module('AngStarter') 
-    .constant('CSRF_TOKEN', {_token: 'TOKEN-HERE'});
+    .constant('CSRF_TOKEN', {_token: 'TOKEN-HERE'})
+    .constant('FIREBASEMDTBACKOFFICEDB', 'https://mdtbackoffice.firebaseio.com/DEVELOPMENT/');

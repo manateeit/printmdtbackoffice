@@ -1,8 +1,8 @@
 
 angular.module('AngStarter')
 
-       .service('dataSvc', ['dataShare', '$cookieStore', function(dataShare, $cookieStore) {
-            var FIREBASEDB = "https://mdtbackoffice.firebaseio.com/DEVELOPMENT/";
+       .service('dataSvc', ['dataShare', '$cookieStore','FIREBASEMDTBACKOFFICEDB', function(dataShare, $cookieStore,FIREBASEMDTBACKOFFICEDB) {
+            var FIREBASEDB = FIREBASEMDTBACKOFFICEDB;
             return {
                 childlookup: function childlookup (id,recordid,cb,db) {
                     var authdata = $cookieStore.get('UserSession');
