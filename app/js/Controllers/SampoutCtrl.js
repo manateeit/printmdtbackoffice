@@ -37,7 +37,7 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                     
                     dataSvc.getColor(function(resultColor) {
                         $.each(resultColor, function(key, val) {
-                            console.log(val);
+                            //console.log(val);
                             if(val == $scope.dataSamplein.color) {
                                 $scope.color = key;
                             }

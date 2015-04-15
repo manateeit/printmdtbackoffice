@@ -46,13 +46,14 @@ angular.module('AngStarter')
                 getAddress: function getAddress (cb, db) {
                     var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + 'defaults/MDTAddress' ;
+                    console.log(fbUrl);
                     var companyRef = new Firebase(fbUrl);
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
                         if (!error) {
                            companyRef.on('value', function (snapshot) {
                                 cb.call(this, snapshot.val());
                             });
-                         }
+                         } else { console.log("Error Reading Address!");}
                     });
                 }
             };
