@@ -25,13 +25,13 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
 
         dataSvc.childlookup($scope.customerId, $scope.sampoutId, function(result) {
              $scope.data = result;
-            console.log(result);
+
              $scope.$digest($scope.data);        
 
              dataSvc.getsamplein($scope.data.materialID.supplierID, $scope.data.materialID.samplesinID, function(resultSamplein) {
                 $timeout (function () {
                     $scope.dataSamplein = resultSamplein;
-                    console.log(resultSamplein);
+
                     
                     dataSvc.getColor(function(resultColor) {
                         $.each(resultColor, function(key, val) {

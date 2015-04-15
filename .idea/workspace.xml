@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="53015ac1-73da-4ace-8a83-79e8f87bd7f2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" afterPath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/sampout.html" afterPath="$PROJECT_DIR$/app/partials/sampout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="printmdtbackoffice.iws" />
@@ -54,8 +55,8 @@
       <file leaf-file-name="SampoutCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5232558" vertical-offset="225" max-vertical-offset="945">
-              <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.3488372" vertical-offset="225" max-vertical-offset="945">
+              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -64,8 +65,8 @@
       <file leaf-file-name="sampout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/partials/sampout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7160494" vertical-offset="755" max-vertical-offset="1485">
-              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+            <state vertical-scroll-proportion="-2.5308642" vertical-offset="620" max-vertical-offset="1485">
+              <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
@@ -437,8 +438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/sampout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7160494" vertical-offset="755" max-vertical-offset="1485">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+        <state vertical-scroll-proportion="-2.5308642" vertical-offset="620" max-vertical-offset="1485">
+          <caret line="55" column="50" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
           <folding>
             <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
@@ -448,8 +449,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5232558" vertical-offset="225" max-vertical-offset="945">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.3488372" vertical-offset="225" max-vertical-offset="945">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding />
         </state>
       </provider>
