@@ -17,7 +17,7 @@ angular.module('AngStarter')
                         }
                     });
                 },
-                mdtAddress: function mdtAddress (id,cb,db) {
+                mdtAddress: function mdtAddress (db,id,cb) {
                     var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + db + '/' + id ;
                     console.log(fbUrl);

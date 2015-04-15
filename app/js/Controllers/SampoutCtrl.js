@@ -17,12 +17,23 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
         $scope.sampoutId = $routeParams.sampoutId;
     }
     console.log("Address:");
-     dataSvc.getAddress(function(resultAddress) {
+     /* dataSvc.getAddress(function(resultAddress) {
         $scope.address = resultAddress;
          console.log("Address:");
          console.log(resultsAddress);
         $scope.$digest($scope.address);
      },ADDRESS);
+*/
+
+        dataSvc.mdtAddress("defaults","MDTAddress",function(resultAddress) {
+            $timeout (function () {
+                $scope.address = resultAddress;
+                console.log("Address:");
+                console.log(resultsAddress);
+                $scope.$digest($scope.address);
+
+            });
+        });
 
 
         dataSvc.childlookup($scope.customerId, $scope.sampoutId, function(result) {

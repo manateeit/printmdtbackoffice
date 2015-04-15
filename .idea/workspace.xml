@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53015ac1-73da-4ace-8a83-79e8f87bd7f2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" afterPath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Services/dataSvc.js" afterPath="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -51,21 +52,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampoutCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SampoutCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.6785715" vertical-offset="180" max-vertical-offset="975">
-              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.6454918" vertical-offset="195" max-vertical-offset="1140">
+              <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataSvc.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dataSvc.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84302324" vertical-offset="675" max-vertical-offset="2250">
-              <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
+              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -99,8 +100,8 @@
         <option value="$PROJECT_DIR$/app/partials/sampin.html" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/partials/sampout.html" />
-        <option value="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
+        <option value="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
       </list>
     </option>
   </component>
@@ -492,18 +493,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
+    <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.6785715" vertical-offset="180" max-vertical-offset="975">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
+    <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84302324" vertical-offset="675" max-vertical-offset="2250">
-          <caret line="74" column="41" selection-start-line="74" selection-start-column="41" selection-end-line="74" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.6454918" vertical-offset="195" max-vertical-offset="1140">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
           <folding />
         </state>
       </provider>
