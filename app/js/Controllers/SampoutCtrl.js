@@ -41,7 +41,7 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                         $timeout (function () {
                             $scope.address = resultAddress;
                             console.log("Address:");
-                            console.log(resultsAddress);
+                            //console.log(resultAddress);
                             $scope.$digest($scope.address);
 
                         });
