@@ -7,7 +7,6 @@ angular.module('AngStarter')
                 childlookup: function childlookup (id,recordid,cb,db) {
                     var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + db + '/' + id + "/" + recordid;
-                    console.log(fbUrl);
                     var companyRef = new Firebase(fbUrl);
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
                         if (!error) {
@@ -24,7 +23,8 @@ angular.module('AngStarter')
                     var companyRef = new Firebase(fbUrl);
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
                         if (!error) {
-                            companyRef.on('value', function (snapshot) {
+                            companyRef.on('once', function (snapshot) {
+                                console.log(snapshot.val());
                                 cb.call(this, snapshot.val());
                             });
                         }
