@@ -23,7 +23,7 @@ angular.module('AngStarter')
                     var companyRef = new Firebase(fbUrl);
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
                         if (!error) {
-                            companyRef.on('once', function (snapshot) {
+                            companyRef.on('value', function (snapshot) {
                                 console.log(snapshot.val());
                                 cb.call(this, snapshot.val());
                             });
