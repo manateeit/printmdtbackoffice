@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53015ac1-73da-4ace-8a83-79e8f87bd7f2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" afterPath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Services/dataSvc.js" afterPath="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -65,8 +64,8 @@
       <file leaf-file-name="dataSvc.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59302324" vertical-offset="519" max-vertical-offset="2040">
-              <caret line="55" column="72" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.6511628" vertical-offset="519" max-vertical-offset="2040">
+              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -481,8 +480,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59302324" vertical-offset="519" max-vertical-offset="2040">
-          <caret line="55" column="72" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
+        <state vertical-scroll-proportion="0.6511628" vertical-offset="519" max-vertical-offset="2040">
+          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
           <folding />
         </state>
       </provider>

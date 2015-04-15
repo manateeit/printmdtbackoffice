@@ -45,7 +45,7 @@ angular.module('AngStarter')
 
                 getAddress: function getAddress (cb, db) {
                     var authdata = $cookieStore.get('UserSession');
-                    var fbUrl = FIREBASEDB + 'defaults/MDTAddress' ;
+                    var fbUrl = FIREBASEDB + 'defaults/' ;
                     console.log(fbUrl);
                     var companyRef = new Firebase(fbUrl);
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
