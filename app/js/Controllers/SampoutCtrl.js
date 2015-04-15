@@ -25,15 +25,7 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
      },ADDRESS);
 */
 
-        dataSvc.mdtAddress("defaults","MDTAddress",function(resultAddress) {
-            $timeout (function () {
-                $scope.address = resultAddress;
-                console.log("Address:");
-                console.log(resultsAddress);
-                $scope.$digest($scope.address);
 
-            });
-        });
 
 
         dataSvc.childlookup($scope.customerId, $scope.sampoutId, function(result) {
@@ -45,6 +37,15 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                 $timeout (function () {
                     $scope.dataSamplein = resultSamplein;
 
+                    dataSvc.mdtAddress("defaults","MDTAddress",function(resultAddress) {
+                        $timeout (function () {
+                            $scope.address = resultAddress;
+                            console.log("Address:");
+                            console.log(resultsAddress);
+                            $scope.$digest($scope.address);
+
+                        });
+                    });
                     
                     dataSvc.getColor(function(resultColor) {
                         $.each(resultColor, function(key, val) {

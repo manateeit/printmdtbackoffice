@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="53015ac1-73da-4ace-8a83-79e8f87bd7f2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" afterPath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Services/dataSvc.js" afterPath="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="printmdtbackoffice.iws" />
@@ -52,21 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampoutCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SampoutCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.75" vertical-offset="375" max-vertical-offset="1140">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33811477" vertical-offset="255" max-vertical-offset="1155">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataSvc.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dataSvc.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.872093" vertical-offset="0" max-vertical-offset="2250">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -100,8 +99,8 @@
         <option value="$PROJECT_DIR$/app/partials/sampin.html" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/partials/sampout.html" />
-        <option value="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
+        <option value="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
       </list>
     </option>
   </component>
@@ -351,10 +350,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="221" y="171" width="1415" height="826" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19068414" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19068414" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
@@ -493,18 +492,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
+    <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.75" vertical-offset="375" max-vertical-offset="1140">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2250">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
+    <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.872093" vertical-offset="0" max-vertical-offset="2250">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.33811477" vertical-offset="255" max-vertical-offset="1155">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
