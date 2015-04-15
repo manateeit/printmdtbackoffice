@@ -17,6 +17,19 @@ angular.module('AngStarter')
                         }
                     });
                 },
+                mdtAddress: function mdtAddress (id,cb,db) {
+                    var authdata = $cookieStore.get('UserSession');
+                    var fbUrl = FIREBASEDB + db + '/' + id ;
+                    console.log(fbUrl);
+                    var companyRef = new Firebase(fbUrl);
+                    companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
+                        if (!error) {
+                            companyRef.on('value', function (snapshot) {
+                                cb.call(this, snapshot.val());
+                            });
+                        }
+                    });
+                },
 
                 getsamplein: function getsamplein (id, recordid, cb, db) {
                     var authdata = $cookieStore.get('UserSession');
@@ -46,7 +59,7 @@ angular.module('AngStarter')
 
                 getAddress: function getAddress (cb, db) {
                     var authdata = $cookieStore.get('UserSession');
-                    var fbUrl = FIREBASEDB + 'defaults/' ;
+                    var fbUrl = FIREBASEDB + 'defaults/MDTAddress' ;
                     console.log(fbUrl);
                     var companyRef = new Firebase(fbUrl);
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
