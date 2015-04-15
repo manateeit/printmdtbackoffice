@@ -19,11 +19,13 @@
                 <td style="width:25%; border-right: 1px solid transparent;">
                     <p style="text-align: left;">
                         <img align= "left" id="imgData" alt="MDT LOGO" src="img/Logo.png" style="width: 200px;">
-                        <i class="fa fa-map-marker"></i>  {{ address.Address }} <br/>
-                        <i class="fa fa-phone"></i>   {{ address.Phone | tel }} <br/>
-                        <i class="fa fa-fax"></i>  {{ address.Fax | tel }} <br/>
-                        <i class="fa fa-envelope-o"></i>  {{ address.email }} <br/>
                     </p>
+                </td>
+                <td style="font-size:16px;width:40%">
+                    <i class="fa fa-map-marker"></i>  {{ address.Address }} <br/>
+                    <i class="fa fa-phone"></i>   {{ address.Phone | tel }} <br/>
+                    <i class="fa fa-fax"></i>  {{ address.Fax | tel }} <br/>
+                    <i class="fa fa-envelope-o"></i>  {{ address.email }} <br/>
                 </td>
                 <td style="font-size:16px;width:40%">
                     <strong>Customer Name:</strong>  {{ data.customer.name }} <br/>
