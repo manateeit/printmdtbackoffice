@@ -25,7 +25,7 @@
                 </td>
                 <td style="font-size:12px;">
                     <strong>Contact Name:</strong>  {{ data.contact.name }} <br/>
-                    <strong>Contact Phone:</strong> <span ng-show="data.contact.workPhone">{{ data.contact.workPhone }}</span> <br/>
+                    <strong>Contact Phone:</strong> <span ng-show="data.contact.workPhone">{{ data.contact.workPhone | tel }}</span> <br/>
                     <strong>Contact Email:</strong>  {{ data.contact.email }}  <br/>
                     <strong>Material Number:</strong> {{ data.material.mdtID }}<br/>
                     <strong>SampleIn ID:</strong> {{ sampinId }} <br/>

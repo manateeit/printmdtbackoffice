@@ -9,5 +9,5 @@ angular.module('AngStarter')
         var out = "";
         var words = input.split(' ');
         return words[0];
-  };
-})
+  }
+});
