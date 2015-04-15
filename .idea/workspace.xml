@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53015ac1-73da-4ace-8a83-79e8f87bd7f2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/partials/sampout.html" afterPath="$PROJECT_DIR$/app/partials/sampout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" afterPath="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="printmdtbackoffice.iws" />
@@ -51,21 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampoutCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SampoutCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="915">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.5232558" vertical-offset="225" max-vertical-offset="945">
+              <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sampout.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sampout.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/partials/sampout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1609195" vertical-offset="620" max-vertical-offset="1485">
-              <caret line="75" column="126" selection-start-line="75" selection-start-column="126" selection-end-line="75" selection-end-column="126" />
+            <state vertical-scroll-proportion="-2.7160494" vertical-offset="755" max-vertical-offset="1485">
+              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
@@ -83,7 +83,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/js/Controllers/SampinCtrl.js" />
-        <option value="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
         <option value="$PROJECT_DIR$/app/js/Config/Constants.js" />
         <option value="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
         <option value="$PROJECT_DIR$/app/js/Filters/word.js" />
@@ -91,6 +90,7 @@
         <option value="$PROJECT_DIR$/app/partials/sampin.html" />
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/partials/sampout.html" />
+        <option value="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
       </list>
     </option>
   </component>
@@ -435,22 +435,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="915">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/sampout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1609195" vertical-offset="620" max-vertical-offset="1485">
-          <caret line="75" column="126" selection-start-line="75" selection-start-column="126" selection-end-line="75" selection-end-column="126" />
+        <state vertical-scroll-proportion="-2.7160494" vertical-offset="755" max-vertical-offset="1485">
+          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
           <folding>
             <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5232558" vertical-offset="225" max-vertical-offset="945">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
