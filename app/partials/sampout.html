@@ -15,42 +15,18 @@
     <!-- <div class="col-md- col-md-offset-1"> -->
         <table class="table table-hover table-bordered" id="top-header">
             <tbody>
-            <tr class="stable-row">  <!--
-                <div class="grid-3 gutter-10">
-                    <div class="span-1">
-                        <img align= "left" id="imgData" alt="MDT LOGO" src="img/Logo.png" style="width: 200px;">
-                    </div>
-                    <div class="span-1">
-                        <i class="fa fa-map-marker"></i> 1501 Sarasota Center Blvd  <br/>
-                        <i class="fa fa-phone"></i>  (888) 818-1238  <br/>
-                        <i class="fa fa-fax"></i> (248) 837-5501<br/>
-                        <i class="fa fa-envelope-o"></i>  guy@materialdifferencetechnologies.com  <br/>
-
-                    </div>
-                    <div class="span-1">
-                        <strong>Customer Name:</strong>  {{ data.customer.name }} <br/>
-                        <strong>Contact Name:</strong> {{ data.contact.name }} <br/>
-                        <strong>Material ID:</strong>  {{ data.materialID.mdtID }}  <br/>
-                        <strong>Sample Out ID:</strong> {{ data.id }}<br/>
-
-                    </div>
-                </div>
-
-   -->
-
-
-
+            <tr class="stable-row">
                 <td style="width:25%; border-right: 1px solid transparent;">
                     <p style="text-align: left;">
                         <img align= "left" id="imgData" alt="MDT LOGO" src="img/Logo.png" style="width: 200px;">
                     </p>
                 </td>
-               <td style="font-size:16px;width:40%">
+               <!--<td style="font-size:16px;width:40%">
                    <i class="fa fa-map-marker"></i> 1501 Sarasota Center Blvd  <br/>
                    <i class="fa fa-phone"></i>  (888) 818-1238  <br/>
                    <i class="fa fa-fax"></i> (248) 837-5501<br/>
                    <i class="fa fa-envelope-o"></i>  guy@materialdifferencetechnologies.com  <br/>
-               </td>
+               </td>-->
 
               <td style="font-size:16px;width:40%">
                     <i class="fa fa-map-marker"></i>  {{ address.Address }} <br/>
@@ -58,7 +34,6 @@
                     <i class="fa fa-fax"></i>  {{ address.Fax | tel }} <br/>
                     <i class="fa fa-envelope-o"></i>  {{ address.email }} <br/>
                 </td>
-
 
                 <td style="font-size:16px;width:40%">
                     <strong>Customer Name:</strong>  {{ data.customer.name }} <br/>
