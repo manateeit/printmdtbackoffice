@@ -38,32 +38,34 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                     $scope.dataSamplein = resultSamplein;
 
                     dataSvc.mdtAddress("defaults","MDTAddress",function(resultAddress) {
-                        $timeout (function () {
                             $scope.address = resultAddress;
-                            console.log("Address:");
-                            //console.log(resultAddress);
                             $scope.$digest($scope.address);
 
+
+                        dataSvc.getColor(function(resultColor) {
+                            $.each(resultColor, function(key, val) {
+                                //console.log(val);
+                                if(val == $scope.dataSamplein.color) {
+                                    $scope.color = key;
+                                }
+                            });
+                            $scope.$digest($scope.color);
+
+
+                        },COLOR);
+                        $scope.$watch('dataSamplein', function () {
+                            var page = document.documentElement.outerHTML
+                                .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
+                                .replace(/(href="|src=")/g, '$1../');
+                            $.post("/cachestaticpage.php", { page: page, url: window.location.href } );
+                            $('button.dontprint').removeAttr('disabled');
                         });
+
                     });
                     
-                    dataSvc.getColor(function(resultColor) {
-                        $.each(resultColor, function(key, val) {
-                            //console.log(val);
-                            if(val == $scope.dataSamplein.color) {
-                                $scope.color = key;
-                            }
-                        });
-                        $scope.$digest($scope.color);
-                    },COLOR);
 
-                    $scope.$watch('dataSamplein', function () {
-                        var page = document.documentElement.outerHTML
-                            .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
-                            .replace(/(href="|src=")/g, '$1../');
-                        $.post("/cachestaticpage.php", { page: page, url: window.location.href } );
-                        $('button.dontprint').removeAttr('disabled');
-                     });
+
+
                 });
              }, SAMPLEIN);
         }, SAMPLEOUT);
