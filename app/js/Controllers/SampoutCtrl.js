@@ -29,16 +29,6 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                             $scope.address = resultAddress;
                             $scope.$digest($scope.address);
 
-         /* Lookup the color.  I am not sure what this is. Please example.. */
-                        dataSvc.getColor(function(resultColor) {
-                                $.each(resultColor, function(key, val) {
-                                    if(val == $scope.dataSamplein.color) {
-                                        $scope.color = key;
-                                    }
-                                });
-                                $scope.$digest($scope.color);
-
-                            },COLOR);
                         $scope.$watch('dataSamplein', function () {
                             var page = document.documentElement.outerHTML
                                 .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
