@@ -25,6 +25,9 @@ MDTCRMApp.config(['$routeProvider', function($routeProvider) {
         .when('/sampout/:sampoutId',  {templateUrl: view('sampout'), controller: 'SampoutCtrl'})
         .when('/sampout/:customerId/:sampoutId/', {templateUrl: view('sampout'), controller: 'SampoutCtrl'})
 
+        .when('/retainin/:retaininId',  {templateUrl: view('retainin'), controller: 'RetainInCtrl'})
+        .when('/retainin/:supplierId/:retaininId/', {templateUrl: view('retainin'), controller: 'RetainInCtrl'})
+
         .when('/unautorized', {template: 'The server respond 401 Unautorized.'})
         ;
     }]);

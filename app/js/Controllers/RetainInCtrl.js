@@ -1,0 +1,32 @@
+"use strict";
+
+MDTCRMCtrls.controller('RetainInCtrl', ['$scope','$routeParams','dataSvc','dataShare','$timeout','$http', '$cookieStore',
+                            function ($scope, $routeParams, dataSvc, dataShare, $timeout, $http, $cookieStore) {
+
+   //  var SAMPLESIN = 'samplesin';
+
+   // if ($routeParams.sampinId == null) {
+   //     console.log($routeParams.sampinId);
+   //     return;
+   // } else {
+   //   $scope.customerId = $routeParams.customerId;
+   //   $scope.sampinId = $routeParams.sampinId;
+   // }
+   //      dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
+   //        $timeout (function () {
+   //           $scope.data = result;
+
+   //           console.log($scope.data);
+
+   //           $scope.$watch('data', function () {
+   //              var page = document.documentElement.outerHTML
+   //                  .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
+   //                  .replace(/(href="|src=")/g, '$1../');
+   //              $.post("/cachestaticpage.php", { page: page, url: window.location.href } );
+   //              $('button.dontprint').removeAttr('disabled');
+   //           });
+   //        });
+        // }, SAMPLESIN);
+
+    }])
+
