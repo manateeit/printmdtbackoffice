@@ -22,6 +22,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
                  $timeout (function () {
 
                  $scope.supplier = supplier;
+                     console.log(supplier);
 
                  $scope.$watch('data', function () {
                      var page = document.documentElement.outerHTML
