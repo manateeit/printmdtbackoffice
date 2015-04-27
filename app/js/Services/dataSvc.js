@@ -17,6 +17,19 @@ angular.module('AngStarter')
                         }
                     });
                 },
+                supplierLookup: function supplierLookup (id,cb,db) {
+                    var authdata = $cookieStore.get('UserSession');
+                    var fbUrl = FIREBASEDB + db + '/' + id + "/";
+                    var companyRef = new Firebase(fbUrl);
+                    console.log(fbUrl);
+                    companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
+                        if (!error) {
+                            companyRef.on('value', function (snapshot) {
+                                cb.call(this, snapshot.val());
+                            });
+                        }
+                    });
+                },
                 mdtAddress: function mdtAddress (db,id,cb) {
                     var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + db + '/' + id ;

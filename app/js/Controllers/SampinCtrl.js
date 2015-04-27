@@ -4,6 +4,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
                             function ($scope, $routeParams, dataSvc, dataShare, $timeout, $http, $cookieStore) {
 
     var SAMPLESIN = 'samplesin';
+    var SUPPLIERS = 'suppliers';
 
    if ($routeParams.sampinId == null) {
        console.log($routeParams.sampinId);
@@ -12,19 +13,29 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
      $scope.customerId = $routeParams.customerId;
      $scope.sampinId = $routeParams.sampinId;
    }
+
         dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
           $timeout (function () {
              $scope.data = result;
+             dataSvc.supplierLookup($scope.customerId, function(supplier) {
 
-             console.log($scope.data);
+                 $timeout (function () {
 
-             $scope.$watch('data', function () {
-                var page = document.documentElement.outerHTML
-                    .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
-                    .replace(/(href="|src=")/g, '$1../');
-                $.post("/cachestaticpage.php", { page: page, url: window.location.href } );
-                $('button.dontprint').removeAttr('disabled');
+                 $scope.supplier = supplier;
+
+                 $scope.$watch('data', function () {
+                     var page = document.documentElement.outerHTML
+                         .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
+                         .replace(/(href="|src=")/g, '$1../');
+                     $.post("/cachestaticpage.php", { page: page, url: window.location.href } );
+                     $('button.dontprint').removeAttr('disabled');
+                 });
+
              });
+
+             }, SUPPLIERS);
+
+
           });
         }, SAMPLESIN);
 
