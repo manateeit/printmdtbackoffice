@@ -30,15 +30,16 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                     dataSvc.mdtAddress(DEFAULT,ADDRESS,function(resultAddress) {
                             $scope.address = resultAddress;
                             $scope.$digest($scope.address);
-
-                        $scope.$watch('data', function () {
+                         console.log("going into $watch");
+                       // $scope.$watch('data', function () {
                             var page = document.documentElement.outerHTML
                                 .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
                                 .replace(/(href="|src=")/g, '$1../');
                             $.post("/cachestaticpage.php", { page: page, url: window.location.href } );
-                            console.log("Disable Removed");
                             $('button.dontprint').removeAttr('disabled');
-                        });
+                       // });
+
+
                   });
                });
              }, SAMPLEIN);
