@@ -31,7 +31,7 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                             $scope.address = resultAddress;
                             $scope.$digest($scope.address);
 
-                        $scope.$watch('dataSamplein', function () {
+                        $scope.$watch('data', function () {
                             var page = document.documentElement.outerHTML
                                 .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
                                 .replace(/(href="|src=")/g, '$1../');
