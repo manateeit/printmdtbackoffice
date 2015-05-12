@@ -16,6 +16,8 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
         $scope.customerId = $routeParams.customerId;
         $scope.sampoutId = $routeParams.sampoutId;
     }
+                                $('button.dontprint').removeAttr('disabled');
+
      /* Lookup the Sample Out via its ID from Firebase */
         dataSvc.childlookup($scope.customerId, $scope.sampoutId, function(result) {
              $scope.data = result;
