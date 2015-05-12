@@ -34,6 +34,7 @@ MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataSh
                                 .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
                                 .replace(/(href="|src=")/g, '$1../');
                             $.post("/cachestaticpage.php", { page: page, url: window.location.href } );
+                            console.log("Disable Removed");
                             $('button.dontprint').removeAttr('disabled');
                         });
                   });
