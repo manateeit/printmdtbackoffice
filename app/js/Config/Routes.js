@@ -14,7 +14,7 @@ MDTCRMApp.config(['$routeProvider', function($routeProvider) {
 
         //.when('/cspec/',  {templateUrl: view('cspec'), controller: 'CspecCtrl'})
         .when('/cspec/:customerId/',  {templateUrl: view('cspec'), controller: 'CspecCtrl'})
-        .when('/cspec/:customerId/:cspecId/', {templateUrl: view('cspec'), controller: 'CspecCtrl'})
+        .when('/cspec/:cspecId/', {templateUrl: view('cspec'), controller: 'CspecCtrl'})
 
         .when('/cspec/label/',  {templateUrl: view('home'), controller: 'HomeCtrl'})
         .when('/cspec/label/:customerId/:cspecId', {templateUrl: view('cspeclabel'), controller: 'CspecCtrl'})

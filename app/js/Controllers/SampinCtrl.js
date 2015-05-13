@@ -40,5 +40,4 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
           });
         }, SAMPLESIN);
 
-    }])
-
+    }]);

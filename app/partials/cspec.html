@@ -1,12 +1,13 @@
 
 <div class="header">
-    <div class="no-print rightText" id="bypassme">
-        <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="javascript:window.print()">Print <i
-                class="icon-white icon-folder-open"></i></button>
-        <button style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="downloadPDF(cspecID)">Download <i
-                class="icon-white icon-folder-open"></i></button>
-        <button ng-hide="true" style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="renderPDF()">PDF</button>
-    </div>
+    <div class="header col-md-12 header-print">
+        <div class="no-print rightText" id="bypassme">
+            <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="DownloadPDF()" disabled>Download <i
+                    class="icon-white icon-folder-open"></i></button>
+            <form id="form-download-file" action="/getfile.php" method="POST" hidden>
+                <input value="" type="text" name="url">
+            </form>
+        </div>
 
     <p style="text-align: center;">
         <img alt="MDT LOGO" src="img/Logo.png" style="height: 80px; width: 174px;">
@@ -21,15 +22,13 @@
         <tbody>
         <tr class="stable-row">
             <td style="width:50%">
-                <strong>Product:</strong> {{ data.material.field83297 + ' ' + data.material.field83298 + ' ' + data.material.field83290 }}<br/>
-                <strong>Customer:</strong> {{ data.customer.name }}<br/>
-                <strong>Date:</strong> {{ data.date }}<br/>
+                <strong>Product Name:</strong> {{ data.productName }}<br/>
+                <strong>Customer:</strong> {{ data.parentName }}<br/>
+                <strong>Date:</strong> {{ data.dateEntered }}<br/>
 
             </td>
             <td>
-                <strong>PO:</strong>  {{ data.po }} <br/>
-                <strong>Part Number:</strong> {{ data.material.name }}<br/>
-                <strong>Spec ID:</strong> {{ cspecId }} <br/>
+                <strong>Material ID:</strong> {{ data.materialID }} <br/>
             </td>
         </tr>
         </tbody>
