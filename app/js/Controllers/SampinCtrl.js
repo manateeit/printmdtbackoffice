@@ -13,12 +13,16 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
    } else {
      $scope.customerId = $routeParams.customerId;
      $scope.sampinId = $routeParams.sampinId;
+
+       console.log("step1");
    }
 
         dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
+            console.log("step2");
+            $scope.data = result;
+            console.log("step3");
+            console.log(result);
 
-             $scope.data = result;
-              console.log(result);
              dataSvc.supplierLookup($scope.customerId, function(supplier) {
                  console.log(supplier);
                  $scope.supplier = supplier;
