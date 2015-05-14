@@ -18,11 +18,14 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
         dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
           $timeout (function () {
              $scope.data = result;
+              console.log(data);
              dataSvc.supplierLookup($scope.customerId, function(supplier) {
+                 console.log(supplier);
                  $scope.supplier = supplier;
                 if(data.contact.id == undefined){
                     $timeout (function () {
                         dataSvc.contactLookup($scope.data.contact, $scope.customerId, function (contact) {
+                            console.log(contact);
                             $scope.data.contact = contact;
                             $scope.$watch('data', function () {
                                 var page = document.documentElement.outerHTML
