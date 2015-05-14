@@ -4,15 +4,17 @@ MDTCRMCtrls.controller('CspecCtrl', ['$scope','$routeParams','cspecDataSvc','$ti
                             function ($scope, $routeParams, cspecDataSvc, $timeout, $http) {
     var CSPEC = 'customerSpecification';
 
-       if ($routeParams.cspecID == null) {
-           console.log($routeParams.sampinId);
+       if ($routeParams.cspecId == null) {
+           console.log($routeParams);
            return;
        } else {
-           $scope.data = $routeParams.cspecID;
+          var id = $routeParams.cspecId;
        }
-       cspecDataSvc.queryCspec($scope.data,function(result) {
+       cspecDataSvc.queryCspec(id,function(result) {
            $timeout (function () {
                $scope.data = result;
+               console.log("here");
+        console.log(result);
 
                $scope.$watch('data', function () {
                    var page = document.documentElement.outerHTML

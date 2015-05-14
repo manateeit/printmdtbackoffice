@@ -125,10 +125,11 @@ angular.module('AngStarter')
             queryCspec: function queryCspecs(id,cb,db) {
                 var fbUrl = FIREBASEMDTBACKOFFICEDB + db + id;
                 var specRefs = new Firebase(fbUrl);
-                Auth.auth(specRefs, function () {
+                console.log(fbUrl);
+               // Auth.auth(specRefs, function () {
                     specRefs.on("value", function (snapshot) {
                         cb.call(this, snapshot.val());
-                    });
+                   // });
                 });
             },
 
