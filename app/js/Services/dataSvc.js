@@ -16,7 +16,8 @@ angular.module('AngStarter')
                                 cb.call(this, snapshot.val());
 
                             });
-                            console.log("step5");
+                        } else {
+                            console.log(error);
                         }
                     });
                 },
