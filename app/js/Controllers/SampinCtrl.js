@@ -31,7 +31,18 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                         dataSvc.contactLookup(result.contact, $scope.customerId, function (contact) {
                             console.log("Lookup Contact Info");
                             console.log(contact);
-                            $scope.data.contact = contact;
+                            $scope.data.contact.name = contact.fname + " " + contact.lname;
+                            $scope.data.contact.email = contact.email;
+                            if (contact.workPhone !== undefined ) {
+                                    $scope.data.contact.workPhone = contact.workPhone;
+                            } else {
+                                if (contact.cellPhone !== undefined) {
+                                    $scope.data.contact.workPhone = contact.cellPhone;
+                                }
+                            }
+
+
+
                             $scope.$watch('data', function () {
                                 var page = document.documentElement.outerHTML
                                     .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
