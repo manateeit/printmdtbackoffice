@@ -16,7 +16,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
    }
 
         dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
-          $timeout (function () {
+
              $scope.data = result;
               console.log(result);
              dataSvc.supplierLookup($scope.customerId, function(supplier) {
@@ -49,7 +49,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                     });
                 }
              }, SUPPLIERS);
-          });
+
         }, SAMPLESIN);
 
     }]);
