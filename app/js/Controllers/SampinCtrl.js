@@ -19,30 +19,32 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
           $timeout (function () {
              $scope.data = result;
              dataSvc.supplierLookup($scope.customerId, function(supplier) {
-
-                 $timeout (function () {
-                    dataSvc.contactLookup($scope.data.contact, $scope.customerId, function(contact){
-
-                        $scope.supplier = supplier;
-                        $scope.data.contact = contact;
-
+                 $scope.supplier = supplier;
+                if(data.contact.id == undefined){
+                    $timeout (function () {
+                        dataSvc.contactLookup($scope.data.contact, $scope.customerId, function (contact) {
+                            $scope.data.contact = contact;
+                            $scope.$watch('data', function () {
+                                var page = document.documentElement.outerHTML
+                                    .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
+                                    .replace(/(href="|src=")/g, '$1../');
+                                $.post("/cachestaticpage.php", {page: page, url: window.location.href});
+                                $('button.dontprint').removeAttr('disabled');
+                            }, CONTACTS);
+                        });
+                    });
+                } else {
+                    $timeout(function () {
                         $scope.$watch('data', function () {
                             var page = document.documentElement.outerHTML
                                 .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
                                 .replace(/(href="|src=")/g, '$1../');
-                            $.post("/cachestaticpage.php", { page: page, url: window.location.href } );
+                            $.post("/cachestaticpage.php", {page: page, url: window.location.href});
                             $('button.dontprint').removeAttr('disabled');
-
-
-
-                        },CONTACTS)
-                 });
-
-             });
-
+                        });
+                    });
+                }
              }, SUPPLIERS);
-
-
           });
         }, SAMPLESIN);
 
