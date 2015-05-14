@@ -28,7 +28,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
 
                 if(result.contact.id == undefined && result.contact !== undefined){
                     $timeout (function () {
-                        dataSvc.contactLookup(result.contact.id, $scope.customerId, function (contact) {
+                        dataSvc.contactLookup(result.contact, $scope.customerId, function (contact) {
                             console.log("Lookup Contact Info");
                             console.log(contact);
                             $scope.data.contact = contact;
