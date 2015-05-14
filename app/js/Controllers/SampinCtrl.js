@@ -1,7 +1,7 @@
 "use strict";
 
-MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataShare','$timeout','$http', '$cookieStore',
-                            function ($scope, $routeParams, dataSvc, dataShare, $timeout, $http, $cookieStore) {
+MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeout','$http', '$cookieStore',
+                            function ($scope, $routeParams, dataSvc,  $timeout, $http, $cookieStore) {
 
     var SAMPLESIN = 'samplesin';
     var SUPPLIERS = 'suppliers';
