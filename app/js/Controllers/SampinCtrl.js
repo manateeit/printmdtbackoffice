@@ -18,18 +18,20 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
    }
 
         dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
-            console.log("step2");
+
             $scope.data = result;
-            console.log("step3");
+            console.log("Lookup Sample IN:");
             console.log(result);
 
              dataSvc.supplierLookup($scope.customerId, function(supplier) {
+                 console.log("Lookup Supplier Name");
                  console.log(supplier);
                  $scope.supplier = supplier;
 
-                if($scope.data.contact.id == undefined){
+                if($scope.data.contact.id == undefined && $scope.data.contact !== undefined){
                     $timeout (function () {
                         dataSvc.contactLookup($scope.data.contact, $scope.customerId, function (contact) {
+                            console.log("Lookup Contact Info");
                             console.log(contact);
                             $scope.data.contact = contact;
                             $scope.$watch('data', function () {
