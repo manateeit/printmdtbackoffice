@@ -38,8 +38,8 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                                     .replace(/(href="|src=")/g, '$1../');
                                 $.post("/cachestaticpage.php", {page: page, url: window.location.href});
                                 $('button.dontprint').removeAttr('disabled');
-                            }, CONTACTS);
-                        });
+                            });
+                        }, CONTACTS);
                     });
                 } else {
                     $timeout(function () {
