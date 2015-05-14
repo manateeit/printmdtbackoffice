@@ -19,7 +19,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
 
             $scope.data = result;
             console.log("Lookup Sample IN:");
-            console.log(result);
+            console.log(result.contact);
 
              dataSvc.supplierLookup($scope.customerId, function(supplier) {
                  console.log("Lookup Supplier Name");
