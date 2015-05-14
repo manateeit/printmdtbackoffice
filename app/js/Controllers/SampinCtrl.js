@@ -13,8 +13,6 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
    } else {
      $scope.customerId = $routeParams.customerId;
      $scope.sampinId = $routeParams.sampinId;
-
-       console.log("step1");
    }
 
         dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
@@ -28,9 +26,9 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                  console.log(supplier);
                  $scope.supplier = supplier;
 
-                if($scope.data.contact.id == undefined && $scope.data.contact !== undefined){
+                if(result.contact.id == undefined && result.contact !== undefined){
                     $timeout (function () {
-                        dataSvc.contactLookup($scope.data.contact, $scope.customerId, function (contact) {
+                        dataSvc.contactLookup(results.contact.id, $scope.customerId, function (contact) {
                             console.log("Lookup Contact Info");
                             console.log(contact);
                             $scope.data.contact = contact;
