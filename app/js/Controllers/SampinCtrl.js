@@ -19,42 +19,42 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
         dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
             $scope.data = result;
             dataSvc.supplierLookup($scope.customerId, function(supplier) {
-                 $scope.supplier = supplier;
+                $timeout (function () {
+                $scope.supplier = supplier;
                 if(result.contact.id == undefined && result.contact !== undefined){
-                    $timeout (function () {
                         dataSvc.contactLookup(result.contact, $scope.customerId, function (contact) {
-                            if (contact.workPhone !== undefined ) {
+                            $timeout (function() {
+                                if (contact.workPhone !== undefined ) {
                                     $scope.contact = {
                                         name: contact.fname + " " + contact.lname,
                                         email: contact.email,
                                         workPhone: contact.workPhone
                                     };
-                            } else {
-                                if (contact.cellPhone !== undefined) {
-                                    $scope.contact = {
-                                        name: contact.fname + " " + contact.lname,
-                                        email: contact.email,
-                                        workPhone: contact.cellPhone
-                                    };
+                                } else {
+                                    if (contact.cellPhone !== undefined) {
+                                        $scope.contact = {
+                                            name: contact.fname + " " + contact.lname,
+                                            email: contact.email,
+                                            workPhone: contact.cellPhone
+                                        };
+                                    }
                                 }
-                            }
 
-                            console.log($scope.contact.name);
-                            console.log($scope.contact.email);
-                            console.log($scope.contact.workPhone);
+                                console.log($scope.contact.name);
+                                console.log($scope.contact.email);
+                                console.log($scope.contact.workPhone);
 
 
-                            $scope.$watch('data', function () {
-                                var page = document.documentElement.outerHTML
-                                    .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
-                                    .replace(/(href="|src=")/g, '$1../');
-                                $.post("/cachestaticpage.php", {page: page, url: window.location.href});
-                                $('button.dontprint').removeAttr('disabled');
+                                $scope.$watch('data', function () {
+                                    var page = document.documentElement.outerHTML
+                                        .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
+                                        .replace(/(href="|src=")/g, '$1../');
+                                    $.post("/cachestaticpage.php", {page: page, url: window.location.href});
+                                    $('button.dontprint').removeAttr('disabled');
+                                });
                             });
-
-
                         }, CONTACTS);
-                    });
+
                 } else {
                     console.log("updated the data");
                     $scope.contact.name = result.contact.name;
@@ -78,6 +78,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                         });
                     });
                 }
+                });
              }, SUPPLIERS);
 
         }, SAMPLESIN);
