@@ -38,13 +38,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                                             workPhone: contact.cellPhone
                                         };
                                     }
-                                }
-
-                                console.log($scope.contact.name);
-                                console.log($scope.contact.email);
-                                console.log($scope.contact.workPhone);
-
-
+                                };
                                 $scope.$watch('data', function () {
                                     var page = document.documentElement.outerHTML
                                         .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
@@ -56,17 +50,20 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                         }, CONTACTS);
 
                 } else {
-                    console.log("updated the data");
-                    $scope.contact.name = result.contact.name;
-                    $scope.contact.email = result.contact.email;
 
-                    if (result.contact.workPhone !== undefined) {
-                        $scope.contact.workPhone = result.contact.workPhone;
+                    if (result.contact.workPhone !== undefined ) {
+                        $scope.contact = {
+                            name: result.contact.name,
+                            email: result.contact.email,
+                            workPhone: result.contact.workPhone                        };
                     } else {
                         if (result.contact.cellPhone !== undefined) {
-                            $scope.contact.workPhone = result.contact.cellPhone;
+                            $scope.contact = {
+                                name: result.contact.name,
+                                email: result.contact.email,
+                                workPhone: result.contact.cellPhone
+                            };
                         }
-                    }
 
                     $timeout(function () {
                         $scope.$watch('data', function () {
