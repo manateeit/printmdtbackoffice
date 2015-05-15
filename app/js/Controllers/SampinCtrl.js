@@ -14,10 +14,12 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
      $scope.customerId = $routeParams.customerId;
      $scope.sampinId = $routeParams.sampinId;
 
+/*
        $scope.contact = {
          name: 'TEMP',
          email: 'TEMP@email.com',
          workPhone: '9999999999'
+*/
      }
    }
 
@@ -35,21 +37,20 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                 if(result.contact.id == undefined && result.contact !== undefined){
                     $timeout (function () {
                         dataSvc.contactLookup(result.contact, $scope.customerId, function (contact) {
-                            console.log("Lookup Contact Info");
-                            console.log(contact);
-                            console.log(contact.fname);
-                            console.log(contact.lname);
-
-                            $scope.contact.name = contact.fname + " " + contact.lname;
-                            console.log($scope.contact.name);
-                            $scope.contact.email = contact.email;
-                            console.log($scope.contact.email);
-
                             if (contact.workPhone !== undefined ) {
+                                    $scope.contact = {
+                                        name:contact.fname + " " + contact.lname,
+                                        email: contact.email,
+                                        workPhone: contact.workPhone
+                                    };
                                     $scope.contact.workPhone = contact.workPhone;
                             } else {
                                 if (contact.cellPhone !== undefined) {
-                                    $scope.contact.workPhone = contact.cellPhone;
+                                    $scope.contact = {
+                                        name:contact.fname + " " + contact.lname,
+                                        email: contact.email,
+                                        workPhone: contact.cellPhone
+                                    };
                                 }
                             }
 
