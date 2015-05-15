@@ -63,7 +63,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                         }, CONTACTS);
                     });
                 } else {
-
+                    console.log("updated the data");
                     $scope.contact.name = result.contact.name;
                     $scope.contact.email = result.contact.email;
 
