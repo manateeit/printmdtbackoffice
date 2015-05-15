@@ -55,7 +55,8 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                         $scope.contact = {
                             name: result.contact.name,
                             email: result.contact.email,
-                            workPhone: result.contact.workPhone                        };
+                            workPhone: result.contact.workPhone
+                        };
                     } else {
                         if (result.contact.cellPhone !== undefined) {
                             $scope.contact = {
@@ -64,7 +65,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                                 workPhone: result.contact.cellPhone
                             };
                         }
-
+                    }
                     $timeout(function () {
                         $scope.$watch('data', function () {
                             var page = document.documentElement.outerHTML
