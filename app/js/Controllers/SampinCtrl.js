@@ -13,6 +13,11 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
    } else {
      $scope.customerId = $routeParams.customerId;
      $scope.sampinId = $routeParams.sampinId;
+     $scope.contact = {
+         name: '',
+         email: '',
+         workPhone: ''
+     }
    }
 
         dataSvc.childlookup($scope.customerId, $scope.sampinId, function(result) {
@@ -31,13 +36,16 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                         dataSvc.contactLookup(result.contact, $scope.customerId, function (contact) {
                             console.log("Lookup Contact Info");
                             console.log(contact);
-                            $scope.data.contact.name = contact.fname + " " + contact.lname;
-                            $scope.data.contact.email = contact.email;
+                            console.log(contact.fname);
+                            console.log(contact.lname);
+                            $scope.contact.name = contact.fname + " " + contact.lname;
+                            $scope.contact.email = contact.email;
+
                             if (contact.workPhone !== undefined ) {
-                                    $scope.data.contact.workPhone = contact.workPhone;
+                                    $scope.contact.workPhone = contact.workPhone;
                             } else {
                                 if (contact.cellPhone !== undefined) {
-                                    $scope.data.contact.workPhone = contact.cellPhone;
+                                    $scope.contact.workPhone = contact.cellPhone;
                                 }
                             }
 
@@ -53,6 +61,18 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                         }, CONTACTS);
                     });
                 } else {
+
+                    $scope.contact.name = result.contact.name;
+                    $scope.contact.email = result.contact.email;
+
+                    if (result.contact.workPhone !== undefined ) {
+                        $scope.contact.workPhone = result.contact.workPhone;
+                    } else {
+                        if (result.contact.cellPhone !== undefined) {
+                            $scope.contact.workPhone = result.contact.cellPhone;
+                        }
+                    }
+
                     $timeout(function () {
                         $scope.$watch('data', function () {
                             var page = document.documentElement.outerHTML
