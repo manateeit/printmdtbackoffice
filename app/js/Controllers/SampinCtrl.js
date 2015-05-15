@@ -36,8 +36,6 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                                         email: contact.email,
                                         workPhone: contact.workPhone
                                     };
-
-                                    $scope.contact.workPhone = contact.workPhone;
                             } else {
                                 if (contact.cellPhone !== undefined) {
                                     $scope.contact = {
@@ -48,6 +46,9 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                                 }
                             }
 
+                            console.log($scope.contact.name);
+                            console.log($scope.contact.email);
+                            console.log($scope.contact.workPhone);
 
 
                             $scope.$watch('data', function () {
@@ -57,6 +58,8 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                                 $.post("/cachestaticpage.php", {page: page, url: window.location.href});
                                 $('button.dontprint').removeAttr('disabled');
                             });
+
+
                         }, CONTACTS);
                     });
                 } else {
