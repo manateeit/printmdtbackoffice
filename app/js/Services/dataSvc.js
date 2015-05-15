@@ -12,8 +12,6 @@ angular.module('AngStarter')
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
                         if (!error) {
                             companyRef.on('value', function (snapshot) {
-                               console.log("snapshot");
-                                console.log(snapshot.val());
                                 cb.call(this, snapshot.val());
 
                             });
@@ -39,7 +37,7 @@ angular.module('AngStarter')
                     var authdata = $cookieStore.get('UserSession');
                     var fbUrl = FIREBASEDB + db + '/' + sp +'/'+ id + "/";
                     var companyRef = new Firebase(fbUrl);
-                    console.log(fbUrl);
+                   // console.log(fbUrl);
                     companyRef.authWithCustomToken(authdata.token, function(error, authdata) {
                         if (!error) {
                             companyRef.on('value', function (snapshot) {

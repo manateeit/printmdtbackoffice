@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53015ac1-73da-4ace-8a83-79e8f87bd7f2" name="Default" comment="removed timeout">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Controllers/SampinCtrl.js" afterPath="$PROJECT_DIR$/app/js/Controllers/SampinCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Config/Constants.js" afterPath="$PROJECT_DIR$/app/js/Config/Constants.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/Services/dataSvc.js" afterPath="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="printmdtbackoffice.iws" />
@@ -39,21 +40,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SampinCtrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SampinCtrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampinCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.505618">
-              <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
-              <folding />
+            <state vertical-scroll-proportion="-34.407406">
+              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding>
+                <element signature="e#1121#1464#0" expanded="false" />
+                <element signature="e#1545#1912#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Constants.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/Config/Constants.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.16042781">
+              <caret line="6" column="90" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -62,8 +66,8 @@
       <file leaf-file-name="dataSvc.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.185185">
-              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
+            <state vertical-scroll-proportion="-4.703704">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -82,10 +86,10 @@
         <option value="$PROJECT_DIR$/app/js/Controllers/SampoutCtrl.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/partials/sampout.html" />
-        <option value="$PROJECT_DIR$/app/js/Config/Constants.js" />
-        <option value="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
         <option value="$PROJECT_DIR$/app/partials/sampin.html" />
         <option value="$PROJECT_DIR$/app/js/Controllers/SampinCtrl.js" />
+        <option value="$PROJECT_DIR$/app/js/Services/dataSvc.js" />
+        <option value="$PROJECT_DIR$/app/js/Config/Constants.js" />
       </list>
     </option>
   </component>
@@ -492,7 +496,31 @@
       <option name="project" value="LOCAL" />
       <updated>1431649045602</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="removed timeout">
+      <created>1431649534509</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1431649534509</updated>
+    </task>
+    <task id="LOCAL-00027" summary="removed timeout">
+      <created>1431650003152</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1431650003152</updated>
+    </task>
+    <task id="LOCAL-00028" summary="removed timeout">
+      <created>1431650371545</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1431650371545</updated>
+    </task>
+    <task id="LOCAL-00029" summary="bug in {}">
+      <created>1431650492618</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1431650492618</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -547,11 +575,12 @@
     <MESSAGE value="contacts were in the wrong spot" />
     <MESSAGE value="updated the $data.contact with matching fields" />
     <MESSAGE value="updated data.contact to contact" />
-    <MESSAGE value="removed timeout" />
     <MESSAGE value="reformated $scope.contact" />
     <MESSAGE value="code error" />
     <MESSAGE value="bug in code" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug in code" />
+    <MESSAGE value="removed timeout" />
+    <MESSAGE value="bug in {}" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug in {}" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -575,7 +604,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding />
+          <folding>
+            <element signature="e#1121#1464#0" expanded="false" />
+            <element signature="e#1545#1912#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -953,22 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.185185">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/Config/Constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="89" selection-start-line="6" selection-start-column="89" selection-end-line="6" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/partials/sampin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.7647057">
@@ -984,8 +1000,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/js/Controllers/SampinCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.505618">
-          <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+        <state vertical-scroll-proportion="-34.407406">
+          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding>
+            <element signature="e#1121#1464#0" expanded="false" />
+            <element signature="e#1545#1912#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/Services/dataSvc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.703704">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/Config/Constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16042781">
+          <caret line="6" column="90" selection-start-line="6" selection-start-column="90" selection-end-line="6" selection-end-column="90" />
           <folding />
         </state>
       </provider>
