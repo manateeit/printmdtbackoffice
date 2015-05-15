@@ -13,10 +13,11 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
    } else {
      $scope.customerId = $routeParams.customerId;
      $scope.sampinId = $routeParams.sampinId;
-     $scope.contact = {
-         name: '',
-         email: '',
-         workPhone: ''
+
+       $scope.contact = {
+         name: 'TEMP',
+         email: 'TEMP@email.com',
+         workPhone: '9999999999'
      }
    }
 
@@ -38,8 +39,11 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','$timeou
                             console.log(contact);
                             console.log(contact.fname);
                             console.log(contact.lname);
+
                             $scope.contact.name = contact.fname + " " + contact.lname;
+                            console.log($scope.contact.name);
                             $scope.contact.email = contact.email;
+                            console.log($scope.contact.email);
 
                             if (contact.workPhone !== undefined ) {
                                     $scope.contact.workPhone = contact.workPhone;
