@@ -1,7 +1,7 @@
 "use strict";
 
-MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','dataShare','$timeout','$http', '$cookieStore',
-                            function ($scope, $routeParams, dataSvc, dataShare, $timeout, $http, $cookieStore) {
+MDTCRMCtrls.controller('SampoutCtrl', ['$scope','$routeParams','dataSvc','$timeout','$http', '$cookieStore',
+                            function ($scope, $routeParams, dataSvc, $timeout, $http, $cookieStore) {
 
     var SAMPLEOUT = "samplesout";
     var SAMPLEIN = "samplesin";
