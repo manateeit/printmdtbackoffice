@@ -1,7 +1,7 @@
 "use strict";
 
-MDTCRMCtrls.controller('RetainInCtrl', ['$scope','$routeParams','dataSvc','dataShare','$timeout','$http', '$cookieStore',
-                            function ($scope, $routeParams, dataSvc, dataShare, $timeout, $http, $cookieStore) {
+MDTCRMCtrls.controller('RetainInCtrl', ['$scope','$routeParams','dataSvc','$timeout','$http', '$cookieStore',
+                            function ($scope, $routeParams, dataSvc, $timeout, $http, $cookieStore) {
 
     var RETAININ = 'retainin';
 
@@ -15,10 +15,6 @@ MDTCRMCtrls.controller('RetainInCtrl', ['$scope','$routeParams','dataSvc','dataS
         dataSvc.childlookup($scope.supplierId, $scope.retaininId, function(result) {
           $timeout (function () {
              $scope.data = result;
-
-            
-             console.log($scope.data);
-
              $scope.$watch('data', function () {
                 var page = document.documentElement.outerHTML
                     .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
